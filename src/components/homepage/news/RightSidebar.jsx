@@ -1,8 +1,12 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import Image from 'next/image';
 import React from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import img1 from '@/assets/swimming.png'
+import img2 from '@/assets/class.png'
+import img3 from '@/assets/playground.png'
 
 const RightSidebar = () => {
     const handleGoogleSignIn=async()=>{
@@ -25,7 +29,24 @@ const RightSidebar = () => {
 Login With Google</button>
             <button className='btn' onClick={handleGitHubSignIn}><FaGithub />Login With GitHub</button>
             </div>
-        </div>
+            <div className='bg-gray-300 py-10'>
+                <h2 className='font-bold text-2xl p-4'>Q-Zone</h2>
+                
+<figure>
+                    <Image src={img1} alt='left-img' width={400} height={400}/>
+                  </figure>
+
+                  <figure>
+                    <Image src={img2} alt='left-img' width={400} height={400}/>
+                  </figure>
+                  <figure>
+                    <Image src={img3} alt='left-img' width={400} height={400}/>
+                  </figure>
+                </div>
+                
+            </div>
+
+        
     );
 };
 
